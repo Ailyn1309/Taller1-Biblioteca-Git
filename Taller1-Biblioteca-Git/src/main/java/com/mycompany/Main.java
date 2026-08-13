@@ -47,6 +47,12 @@ public class Main {
         book.add(b);
     }
 
-    
+    public void bookList(){
+        for(Book b: book){
+            System.out.println(b);
+        }
+    }
+
+   
 
 }
