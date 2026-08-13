@@ -18,4 +18,13 @@ public class Main {
             System.out.println(c);
         }
     }
+    public Customer getById(String id){
+        for(Customer c: customer){
+            if(c.getId().equals(id)){
+                return c;
+            }
+        }
+        return null;
+    }
+
 }
