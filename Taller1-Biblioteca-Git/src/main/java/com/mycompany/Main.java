@@ -38,5 +38,8 @@ public class Main {
         System.out.println("Cliente no encontrado");
         return null;
     }
-    
+    public boolean deleteCustomer(String id){
+        return customer.removeIf(c-> c.getId().equals(id));
+    }
+
 }
