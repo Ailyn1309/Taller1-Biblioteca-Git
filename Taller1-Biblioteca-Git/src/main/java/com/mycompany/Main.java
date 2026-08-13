@@ -26,5 +26,17 @@ public class Main {
         }
         return null;
     }
-
+    public Customer updateCustomer(String id, String name, String phoneNumber, String email){
+        for(Customer c: customer){
+            if(c.getId().equals(id)){
+                c.setName(name);
+                c.setPhoneNumber(phoneNumber);
+                c.setEmail(email);
+                return c;
+            }
+        }
+        System.out.println("Cliente no encontrado");
+        return null;
+    }
+    
 }
