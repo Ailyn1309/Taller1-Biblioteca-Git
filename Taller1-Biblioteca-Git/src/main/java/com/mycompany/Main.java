@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     static ArrayList<Customer> customer = new ArrayList<>();
+    static ArrayList<Book> book = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         // Aquí irá el menú (Fase 8)
@@ -18,7 +19,7 @@ public class Main {
             System.out.println(c);
         }
     }
-    public Customer getById(String id){
+    public Customer getCustomer(String id){
         for(Customer c: customer){
             if(c.getId().equals(id)){
                 return c;
@@ -41,5 +42,11 @@ public class Main {
     public boolean deleteCustomer(String id){
         return customer.removeIf(c-> c.getId().equals(id));
     }
+
+    public void createBook(Book b){
+        book.add(b);
+    }
+
+    
 
 }
