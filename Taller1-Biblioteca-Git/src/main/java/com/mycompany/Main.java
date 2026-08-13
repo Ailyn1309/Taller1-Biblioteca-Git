@@ -13,7 +13,9 @@ public class Main {
     public void create(Customer c){
         customer.add(c);
     }
-    
-
-
+    public void customerList(){
+        for(Customer c : customer){
+            System.out.println(c);
+        }
+    }
 }
