@@ -73,5 +73,8 @@ public class Main {
         }
        System.out.println("Libro no encontrado");
    }
+   public boolean bookDelete(String code){
+        return book.removeIf(b-> b.getCode().equals(code));
+   }
 
 }
