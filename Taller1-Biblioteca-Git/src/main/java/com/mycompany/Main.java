@@ -1,7 +1,5 @@
 package com.mycompany;
 
-import com.mycompany.Customer;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
@@ -27,17 +25,17 @@ public class Main {
         }
         return null;
     }
-    public Customer updateCustomer(String id, String name, String phoneNumber, String email){
+    public void customerUpdate(String id, String name, String phoneNumber, String email){
         for(Customer c: customer){
             if(c.getId().equals(id)){
                 c.setName(name);
                 c.setPhoneNumber(phoneNumber);
                 c.setEmail(email);
-                return c;
+                return;
             }
         }
         System.out.println("Cliente no encontrado");
-        return null;
+
     }
     public boolean deleteCustomer(String id){
         return customer.removeIf(c-> c.getId().equals(id));
@@ -63,6 +61,17 @@ public class Main {
         return null;
    }
 
-   
+   public void bookUpdate(String code, String title, String yearPub, String author, boolean available) {
+        for(Book b: book){
+            if(b.getCode()==code){
+                b.setAuthor(author);
+                b.setTitle(title);
+                b.setYearpub(yearPub);
+                b.setAvailable(available);
+                return;
+            }
+        }
+       System.out.println("Libro no encontrado");
+   }
 
 }

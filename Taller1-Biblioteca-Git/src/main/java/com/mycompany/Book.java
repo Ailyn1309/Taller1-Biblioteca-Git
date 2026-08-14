@@ -2,9 +2,9 @@ package com.mycompany;
 
 public class Book extends Material{
     private String author;
-    private String available;
+    private boolean available;
 
-    public Book(String code, String title, String yearpub, String author, String available) {
+    public Book(String code, String title, String yearpub, String author, boolean available) {
         super(code, title, yearpub);
         this.author = author;
         this.available = available;
@@ -18,11 +18,11 @@ public class Book extends Material{
         this.author = author;
     }
 
-    public String getAvailable() {
+    public boolean isAvailable() {
         return available;
     }
 
-    public void setAvailable(String available) {
+    public void setAvailable(boolean available) {
         this.available = available;
     }
 }
