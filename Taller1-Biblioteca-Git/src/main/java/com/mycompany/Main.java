@@ -53,6 +53,16 @@ public class Main {
         }
     }
 
+   public Book getBook(String code){
+        for(Book b: book){
+            if(b.getCode()==code){
+                return b;
+            }
+        }
+       System.out.println("Libro no registrado");
+        return null;
+   }
+
    
 
 }
