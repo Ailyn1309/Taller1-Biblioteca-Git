@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     static ArrayList<Customer> customer = new ArrayList<>();
     static ArrayList<Book> book = new ArrayList<>();
+    static ArrayList<Loan> loan = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         // Aquí irá el menú (Fase 8)
@@ -76,5 +77,9 @@ public class Main {
    public boolean bookDelete(String code){
         return book.removeIf(b-> b.getCode().equals(code));
    }
+   public void createLoan(Loan l){
+        loan.add(l);
+   }
+   
 
 }
