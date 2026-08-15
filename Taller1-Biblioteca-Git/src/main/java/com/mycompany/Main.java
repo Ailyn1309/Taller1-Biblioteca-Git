@@ -80,6 +80,15 @@ public class Main {
    public void createLoan(Loan l){
         loan.add(l);
    }
+   public void loanRepayment(String loanId){
+        for(Loan l: loan){
+            if(l.getLoanId()==loanId){
+                l.setStatus("Devuelto");
+                return;
+            }
+        }
+       System.out.println("No hay ningún prestamo disponible");
+   }
    
 
 }
