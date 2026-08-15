@@ -89,6 +89,11 @@ public class Main {
         }
        System.out.println("No hay ningún prestamo disponible");
    }
+   public void loanList(){
+        for(Loan l: loan){
+            System.out.println(l);
+        }
+   }
    
 
 }
