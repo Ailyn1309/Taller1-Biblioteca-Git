@@ -56,4 +56,15 @@ public class Loan {
     public void setStatus(String status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Loan{" +
+                "book=" + book +
+                ", loanId='" + loanId + '\'' +
+                ", customer=" + customer +
+                ", date=" + date +
+                ", status='" + status + '\'' +
+                '}';
+    }
 }

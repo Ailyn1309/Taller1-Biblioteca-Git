@@ -34,4 +34,13 @@ public class Material {
     public void setYearpub(String yearpub) {
         this.yearpub = yearpub;
     }
+
+    @Override
+    public String toString() {
+        return "Material{" +
+                "code='" + code + '\'' +
+                ", title='" + title + '\'' +
+                ", yearpub='" + yearpub + '\'' +
+                '}';
+    }
 }
